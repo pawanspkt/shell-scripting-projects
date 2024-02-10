@@ -1,5 +1,11 @@
 #!/bin/bash
 
+########
+#About: This sh prints the list of users in an organization with access to particular repo
+######
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -35,6 +41,14 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+function helper{
+expected-cmd-args=2
+if [ $# -ne $expected_cmd_args]; then
+echo "please execute the script with required cmd args"
+echo "asd"
+}
+
 
 # Main script
 
